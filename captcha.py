@@ -18,7 +18,7 @@ class GetCaptcha():
         # driver = webdriver.Chrome(executable_path="D:\Projects_django\sel\chromedriver\chromedriver.exe")
         # driver.set_script_timeout(10)
         # driver.get("https://resident.uidai.gov.in/verify")
-        ele_captcha = driver.find_element_by_xpath("//*[@id="captcha-img"]")
+        ele_captcha = driver.find_element_by_xpath('//*[@id="captcha-img"]')
 
         # get the captcha as a base64 string
         img_captcha_base64 = driver.execute_async_script("""
