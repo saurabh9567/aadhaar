@@ -16,7 +16,7 @@ driver.get("https://resident.uidai.gov.in/verify")
 getcaptcha.download_captcha(driver)
 captcha_text = getcaptcha.get_captcha_text()
 
-driver.implicitly_wait(5)
+driver.implicitly_wait(20)
 
 uid = driver.find_element_by_xpath('//*[@id="uidno"]')
 captcha = driver.find_element_by_xpath('//*[@id="security_code"]')
