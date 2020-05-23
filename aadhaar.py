@@ -6,7 +6,7 @@ import captcha
 
 uid_no = '541789209718'
 getcaptcha = captcha.GetCaptcha()
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver")
 driver.get("https://resident.uidai.gov.in/verify")
 getcaptcha.download_captcha(driver)
 captcha_text = getcaptcha.get_captcha_text()
@@ -39,7 +39,7 @@ print(elements.text)
 # pw = driver.find_element_by_xpath('//*[@id="password"]')
 
 # un.send_keys('saurabhverma956@gmail.com')
-# pw.send_keys('ruchi@24')
+# pw.send_keys()
 
 # driver.find_element_by_xpath('//*[@id="app__container"]/main/div[2]/form/div[4]/button').click()
 
