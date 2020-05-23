@@ -6,7 +6,7 @@ import captcha
 
 uid_no = '541789209718'
 getcaptcha = captcha.GetCaptcha()
-driver = webdriver.Chrome(executable_path="D:\Projects_django\sel\chromedriver\chromedriver.exe")
+driver = webdriver.Chrome()
 driver.get("https://resident.uidai.gov.in/verify")
 getcaptcha.download_captcha(driver)
 captcha_text = getcaptcha.get_captcha_text()
