@@ -5,7 +5,8 @@ import time
 import captcha
 CHROME_PATH = '/usr/bin/google-chrome-stable'
 CHROMEDRIVER_PATH = '/usr/bin/chromedriver'
-WINDOW_SIZE = "1920,1080"
+# WINDOW_SIZE = "1920,1080"
+WINDOW_SIZE = "1440, 900"
 
 uid_no = '541789209718'
 getcaptcha = captcha.GetCaptcha()
