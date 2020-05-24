@@ -13,9 +13,42 @@ chrome_options.binary_location = CHROME_PATH
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH,
                           chrome_options=chrome_options
                          )  
-driver.get("https://www.google.com")
-driver.get_screenshot_as_file("capture.png")
-driver.close()
+
+driver.get("https://resident.uidai.gov.in/verify")
+driver.implicitly_wait(10)
+uid = driver.find_element_by_xpath('//*[@id="uidno"]')
+getcaptcha.download_captcha(driver)
+captcha_text = getcaptcha.get_captcha_text()
+captcha = driver.find_element_by_xpath('//*[@id="security_code"]')
+
+uid.send_keys(uid_no)
+captcha.send_keys(captcha_text)
+
+driver.implicitly_wait(5)
+driver.find_element_by_xpath('//*[@id="submitButton"]').click()
+
+elements = driver.find_element_by_xpath('//*[@id="maincontent"]/div/div[1]/div[3]')
+print(elements.text)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# driver.get("https://www.google.com")
+# driver.get_screenshot_as_file("capture.png")
+# driver.close()
 
 
 
