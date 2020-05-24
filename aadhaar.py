@@ -18,7 +18,7 @@ chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
 # chromeOptions.add_argument("--no-default-browser-check");
 # chromeOptions.add_argument("--ignore-certificate-errors");
 # chromeOptions.add_argument("--start-maximized");
-chromeOptions.binary_location = CHROME_PATH
+chrome_options.binary_location = CHROME_PATH
 
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH,
                           chrome_options=chrome_options
