@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-CHROME_PATH = '/usr/bin/google-chrome'
+CHROME_PATH = '/usr/bin/google-chrome-stable'
 CHROMEDRIVER_PATH = '/usr/bin/chromedriver'
 WINDOW_SIZE = "1920,1080"
 
