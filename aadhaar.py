@@ -12,6 +12,12 @@ getcaptcha = captcha.GetCaptcha()
 chrome_options = Options()  
 chrome_options.add_argument("--headless")  
 chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
+chromeOptions.addArguments("--test-type");
+chromeOptions.addArguments("--disable-gpu");
+chromeOptions.addArguments("--no-first-run");
+chromeOptions.addArguments("--no-default-browser-check");
+chromeOptions.addArguments("--ignore-certificate-errors");
+chromeOptions.addArguments("--start-maximized");
 chrome_options.binary_location = CHROME_PATH
 
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH,
