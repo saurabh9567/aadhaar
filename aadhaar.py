@@ -10,7 +10,7 @@ WINDOW_SIZE = "1920,1080"
 uid_no = '541789209718'
 getcaptcha = captcha.GetCaptcha()
 chrome_options = Options()  
-chrome_options.add_argument("--headless")  
+# chrome_options.add_argument("--headless")  
 chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
 # chromeOptions.add_argument("--test-type");
 # chromeOptions.add_argument("--disable-gpu");
