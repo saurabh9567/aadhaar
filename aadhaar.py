@@ -10,7 +10,7 @@ WINDOW_SIZE = "1920,1080"
 uid_no = '541789209718'
 getcaptcha = captcha.GetCaptcha()
 chrome_options = Options()  
-# chrome_options.add_argument("--headless")  
+chrome_options.add_argument("--headless")  
 chrome_options.add_argument("--window-size=%s" % WINDOW_SIZE)
 # chromeOptions.add_argument("--test-type");
 # chromeOptions.add_argument("--disable-gpu");
@@ -23,7 +23,7 @@ chrome_options.binary_location = CHROME_PATH
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH,
                           chrome_options=chrome_options
                          )  
-
+print('Driver',driver)
 driver.get("https://resident.uidai.gov.in/verify")
 driver.implicitly_wait(10)
 uid = driver.find_element_by_id("uidno")
