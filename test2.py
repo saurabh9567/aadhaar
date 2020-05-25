@@ -24,7 +24,7 @@ driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH,
 print('Driver',driver)
 driver.get("https://resident.uidai.gov.in/verify")
 driver.implicitly_wait(15)
-driver.get_screenshot_as_file("c7.png")
+driver.get_screenshot_as_file("c8.png")
 print('reached here')
 uid = driver.find_element_by_xpath("/html/body/div[2]/div[2]/div[2]/div[1]/div/div[4]/div/div/div[2]/div/div/form/div[1]/div/div[1]/input").click()
 print('uid',uid)
