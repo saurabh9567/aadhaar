@@ -21,10 +21,10 @@ driver = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH,
                           chrome_options=chrome_options
                          )  
 print('Driver',driver)
-driver.get("https://www.udemy.com/")
+driver.get("https://www.uidai.gov.in/")
 driver.implicitly_wait(15)
 print('reaced at udemy')
-driver.get_screenshot_as_file("c3.png")
+driver.get_screenshot_as_file("c4.png")
 # driver.get("https://resident.uidai.gov.in/verify")
 # driver.implicitly_wait(15)
 # driver.get_screenshot_as_file("c2.png")
